@@ -11,6 +11,7 @@ let hungerjs = 100;
 let healthjs = 100;
 let HR = false;
 let food = 0;
+let l2 = 0;
 //bark.top = 120
 //bark.left = 710
 //leaf.top = 110
@@ -263,7 +264,7 @@ function interaction() {
           setTimeout(() => {			
             npc.style.left = 630 + "px";
             npc.style.top = 111 + "px";
-			nol += 189;
+			nol += 89;
 			document.getElementById('NOL').innerText = nol;
           }, 7000);
         } else if (el == 0) { 
@@ -276,8 +277,8 @@ function interaction() {
    if (shelter == 0) {
     if (playerx < 550 && playerx > 490) {
       if (playery < 441 && playery > 111) { 
-        if (nol >= 100) {
-          nol -= 100;
+        if (nol >= 50) {
+          nol -= 50;
           document.getElementById('NOL').innerText = nol;
           el += 1;
           document.getElementById('shelter').style.width = '120px';
@@ -290,8 +291,8 @@ function interaction() {
   //ship LOGIC
    if (playery < 481 && playery > 451) {
     if ( playerx > 461 && playerx < 541) {
-		if (nol >= 200) {
-		nol -= 200;
+		if (nol >= 100) {
+		nol -= 100;
 		document.querySelector('#NOL').innerText = nol;
 		document.querySelector('#ship').style.width = '180px';
 		document.querySelector('.NPC').style.left = '570px';
@@ -299,6 +300,9 @@ function interaction() {
 		as = 1
 		document.querySelector('.player').style.top = '521px'
 		document.querySelector('.player').style.left = '540px';
+		setTimeout(() => {
+		level2()
+		}, 10000);
 	  }
 	}
   }
@@ -335,4 +339,33 @@ function cheatdonebutton() {
 		document.querySelector('#NOL').innerText = nol;
 		document.querySelector('#log').style.display = 'block';
 	}
+}
+
+function level2() {
+    // Hide the island and shelter
+    document.querySelector('#island').style.display = 'none';
+    document.querySelector('#shelter').style.display = 'none';
+
+    // Hide all bark elements (including clones since querySelectorAll targets all matches)
+    const barks = document.querySelectorAll('.bark');
+    barks.forEach(bark => {
+        bark.style.display = 'none';
+    });
+
+    // Hide all leaf elements (including clones)
+    const leafs = document.querySelectorAll('.leaf');
+    leafs.forEach(leaf => {
+        leaf.style.display = 'none';
+    });
+	
+	setTimeout(() => {
+	let l2 = 1;
+	document.querySelector('#player').style.top = '200px';
+	document.querySelector('.NPC').style.top = '200px';
+	document.querySelector('#ship').style.top = '190px';
+	}, 2000);
+	
+	setTimeout(() => {
+		
+	}, 10000);
 }

@@ -75,6 +75,7 @@ body {
    height: 30px;
    width: 10px;
    box-shadow: 15px 20px 30px black;
+   display: block;
  }
  .leaf {
    border-top: 20px solid rgb(2, 65, 2);
@@ -84,6 +85,7 @@ body {
    top: 110px;
    left: 700px;
    border-radius: 50%;
+   display: block;
  }
  
  #left {
@@ -262,4 +264,29 @@ body {
 	position: absolute;
 	top: 511px;
 	left: 480px;
+}
+
+#fish {
+	text-decoration: underline wavy white;
+}
+
+#wave {
+	position: absolute;
+	text-decoration: underline wavy white;
+	top: 600px;
+	z-index: 4;
+}
+
+#level2w {
+	display: none;
+}
+
+#kraken {
+	position: absolute;
+	display: none;
+	top: 140px;
+}
+
+#ka {
+	display: none;
 }
