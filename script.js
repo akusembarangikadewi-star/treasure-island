@@ -359,7 +359,7 @@ function level2() {
     });
 	
 	setTimeout(() => {
-	let l2 = 1;
+	l2 += 1;
 	document.querySelector('#player').style.top = '200px';
 	document.querySelector('.NPC').style.top = '200px';
 	document.querySelector('#ship').style.top = '190px';
