@@ -345,7 +345,8 @@ function level2() {
     // Hide the island and shelter
     document.querySelector('#island').style.display = 'none';
     document.querySelector('#shelter').style.display = 'none';
-
+	document.querySelecctor('#stone').style.display = 'none';
+	
     // Hide all bark elements (including clones since querySelectorAll targets all matches)
     const barks = document.querySelectorAll('.bark');
     barks.forEach(bark => {
@@ -359,10 +360,10 @@ function level2() {
     });
 	
 	setTimeout(() => {
-	l2 += 1;
-	document.querySelector('#player').style.top = '200px';
-	document.querySelector('.NPC').style.top = '200px';
-	document.querySelector('#ship').style.top = '190px';
+		l2 += 1;
+		document.querySelector('#player').style.top = '200px';
+		document.querySelector('.NPC').style.top = '200px';
+		document.querySelector('#ship').style.top = '190px';
 	}, 2000);
 	
 	setTimeout(() => {
